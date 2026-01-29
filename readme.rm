@@ -1,0 +1,9 @@
+Reflection Report
+
+During the refactoring process, the main challenge was restructuring the code without breaking existing functionality. In the procedural version, the shopping cart relied heavily on global variables, which made the logic straightforward but tightly coupled and unsafe. Refactoring required careful thinking about data access and how to preserve behavior while improving structure.
+
+Using the Module Pattern significantly improved the code quality. By encapsulating the cart data inside a closure, the internal state became private and protected from unintended modification. This reduced the risk of bugs caused by external code directly changing the cart array. The public methods provided a clear and controlled interface for interacting with the cart, making the code easier to understand and maintain.
+
+Design patterns improve code by promoting separation of concerns, encapsulation, and reusability. In this case, the Module Pattern eliminated global scope pollution and organized related functionality into a single logical unit. The refactored code is easier to test, extend, and debug compared to the procedural version.
+
+I would choose a design pattern over procedural code when building applications that are expected to grow, involve multiple developers, or require long-term maintenance. While procedural programming is suitable for small scripts or simple tasks, design patterns offer better structure and scalability for real-world applications.
